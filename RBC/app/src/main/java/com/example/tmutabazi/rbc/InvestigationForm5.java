@@ -15,7 +15,7 @@ public class InvestigationForm5 extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigation_form5);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("Investigation Form");
+        ab.setTitle("INVESTIGATION FORM    5 OUT OF 5");
         one = (Spinner)findViewById(R.id.spinner5);
         one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TypeOfHabitat, R.layout.spinner4));
         two = (Spinner)findViewById(R.id.spinner6);

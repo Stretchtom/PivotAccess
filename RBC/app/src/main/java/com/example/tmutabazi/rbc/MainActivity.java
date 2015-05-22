@@ -1,10 +1,6 @@
 package com.example.tmutabazi.rbc;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
-import android.support.v7.app.ActionBarActivity;
->>>>>>> origin/master
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -17,16 +13,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
 
-        Intent ip = new Intent(MainActivity.this, Notification.class);
-        startActivity(ip);
-        finish();
-
-=======
         Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
         startActivity(ip);
->>>>>>> origin/master
+
     }
 
 

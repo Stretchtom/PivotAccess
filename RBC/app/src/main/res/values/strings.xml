@@ -3,7 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
     <string name="title_activity_notification">Notification</string>
     <string name="title_activity_notification2">Notification2</string>
     <string name="title_activity_permanent_address">PermanentAddress</string>
@@ -27,8 +26,6 @@
     <string name="title_activity_notification6">Notification6</string>
     <string name="title_activity_notification7">Notification7</string>
     <string name="title_activity_notification8">Notification8</string>
-</resources>
-=======
     <string name="title_activity_investigation_form">InvestigationForm</string>
     <string name="title_activity_investigation_form1">InvestigationForm1</string>
 <string name="title_activity_investigation_form2">InvestigationForm2</string>
@@ -72,4 +69,3 @@
     <string name="title_activity_investigation_form5">InvestigationForm5</string>
     <string name="title_activity_case_follow_up">CaseFollowUp</string>
     </resources>
->>>>>>> origin/master
