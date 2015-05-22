@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/rbclogo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".Notification"
             android:label="@string/title_activity_notification" >
         </activity>
@@ -52,7 +51,8 @@
         <activity
             android:name=".Notification8"
             android:label="@string/title_activity_notification8" >
-=======
+        </activity>
+        <activity
             android:name=".InvestigationForm"
             android:label="@string/title_activity_investigation_form" >
         </activity>
@@ -75,7 +75,6 @@
         <activity
             android:name=".CaseFollowUp1"
             android:label="@string/title_activity_case_follow_up" >
->>>>>>> origin/master
         </activity>
     </application>
 

@@ -1,34 +1,45 @@
 package com.example.tmutabazi.rbc;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
-import android.support.v7.app.ActionBarActivity;
->>>>>>> origin/master
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    Button notification;
+    Button investigation;
+    private android.support.v7.app.ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+        notification = (Button) findViewById(R.id.notification);
+        investigation = (Button) findViewById(R.id.investigation);
+        actionBar = getSupportActionBar();
 
-        Intent ip = new Intent(MainActivity.this, Notification.class);
-        startActivity(ip);
-        finish();
 
-=======
-        Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
-        startActivity(ip);
->>>>>>> origin/master
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ip = new Intent(MainActivity.this, Notification.class);
+                startActivity(ip);
+            }
+        });
+
+        investigation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
+                startActivity(ip);
+            }
+        });
+
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
