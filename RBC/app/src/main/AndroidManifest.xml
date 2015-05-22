@@ -16,6 +16,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Notification"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name=".Notification2"
+            android:label="@string/title_activity_notification2" >
+        </activity>
+        <activity
+            android:name=".PermanentAddress"
+            android:label="@string/title_activity_permanent_address" >
+        </activity>
+        <activity
+            android:name=".Notification3"
+            android:label="@string/title_activity_notification3" >
+        </activity>
+        <activity
+            android:name=".Notification4"
+            android:label="@string/title_activity_notifcation4" >
+        </activity>
+        <activity
+            android:name=".Notification5"
+            android:label="@string/title_activity_notification5" >
+        </activity>
+        <activity
+            android:name=".Notification6"
+            android:label="@string/title_activity_notification6" >
+        </activity>
+        <activity
+            android:name=".Notification7"
+            android:label="@string/title_activity_notification7" >
+        </activity>
+        <activity
+            android:name=".Notification8"
+            android:label="@string/title_activity_notification8" >
+        </activity>
     </application>
 
 </manifest>
