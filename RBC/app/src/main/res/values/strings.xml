@@ -3,4 +3,46 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-</resources>
+    <string name="title_activity_investigation_form">InvestigationForm</string>
+    <string name="title_activity_investigation_form1">InvestigationForm1</string>
+<string name="title_activity_investigation_form2">InvestigationForm2</string>
+<string name="title_activity_investigation_form3">InvestigationForm3</string>
+<string-array name="SlideResults">
+<item>Positive</item>
+<item>Negative</item>
+
+</string-array>
+    <string-array name="caseDetection">
+    <item>Reactive</item>
+    <item>Proactive</item>
+    <item>Other</item>
+    </string-array>
+    <string-array name="RDTS">
+        <item>Positive</item>
+        <item>Negative</item>
+
+    </string-array>
+    <string-array name="TreatmentOptions">
+        <item>ACTs</item>
+        <item>Quinine</item>
+        <item>Artesunate</item>
+        <item>Primaquine</item>
+        <item>Other</item>
+
+    </string-array>
+    <string-array name="TypeOfHabitat">
+        <item>Grouped</item>
+        <item>Scattered</item>
+        <item>Boarding(hall)</item>
+        <item>Camp site/temporary resettlement</item>
+       </string-array>
+    <string-array name="LocationOfHouse">
+        <item>Up-hill</item>
+        <item>Bottom hill</item>
+        <item>In Valley</item>
+
+    </string-array>
+    <string name="title_activity_investigation_form4">InvestigationForm4</string>
+    <string name="title_activity_investigation_form5">InvestigationForm5</string>
+    <string name="title_activity_case_follow_up">CaseFollowUp</string>
+    </resources>

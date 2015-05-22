@@ -1,27 +1,26 @@
 package com.example.tmutabazi.rbc;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends ActionBarActivity {
+public class CaseFollowUp1 extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
-        startActivity(ip);
+        setContentView(R.layout.activity_case_follow_up);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setTitle("MALARIA CASE FOLLOW UP FORM");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up, menu);
         return true;
     }
 
