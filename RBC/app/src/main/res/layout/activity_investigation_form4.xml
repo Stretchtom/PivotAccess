@@ -64,12 +64,12 @@
         android:textSize="30dp" />
 
     <EditText
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText24"
         android:layout_alignTop="@+id/textView33"
-        android:layout_toRightOf="@+id/textView33"
-        android:layout_toEndOf="@+id/textView33" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"

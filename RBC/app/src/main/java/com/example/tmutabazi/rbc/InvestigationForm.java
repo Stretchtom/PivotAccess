@@ -16,7 +16,7 @@ public class InvestigationForm extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigation_form);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("Investigation Form");
+        ab.setTitle("INVESTIGATION FORM    1 OUT OF 5");
         next = (Button) findViewById(R.id.button);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
