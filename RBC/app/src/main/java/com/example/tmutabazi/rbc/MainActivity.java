@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+
         notification = (Button) findViewById(R.id.notification);
         investigation = (Button) findViewById(R.id.investigation);
         actionBar = getSupportActionBar();
@@ -31,13 +31,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(ip);
             }
         });
-=======
 
-        Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
-        startActivity(ip);
-
-    }
->>>>>>> origin/master
 
         investigation.setOnClickListener(new View.OnClickListener() {
             @Override
