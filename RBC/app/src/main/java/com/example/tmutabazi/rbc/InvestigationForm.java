@@ -1,39 +1,38 @@
 package com.example.tmutabazi.rbc;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.support.v7.app.ActionBarActivity;
->>>>>>> origin/master
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
-
+public class InvestigationForm extends ActionBarActivity {
+    private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+        setContentView(R.layout.activity_investigation_form);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setTitle("Investigation Form");
+        next = (Button) findViewById(R.id.button);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ip = new Intent(InvestigationForm.this, InvestigationForm2.class);
+                startActivity(ip);
 
-        Intent ip = new Intent(MainActivity.this, Notification.class);
-        startActivity(ip);
-        finish();
-
-=======
-        Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
-        startActivity(ip);
->>>>>>> origin/master
+            }
+        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_investigation_form1, menu);
         return true;
     }
 
