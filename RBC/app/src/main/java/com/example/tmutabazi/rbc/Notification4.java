@@ -1,5 +1,6 @@
 package com.example.tmutabazi.rbc;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,16 +9,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.Calendar;
+import java.util.TimeZone;
 
-public class Notification4 extends ActionBarActivity {
+
+public class Notification4 extends ActionBarActivity implements View.OnClickListener{
 
     private Spinner spinner1;
     private Spinner spinner2;
     private Spinner spinner3;
     private Spinner spinner4;
     private Spinner spinner5;
+    private EditText date;
     Button next4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,8 @@ public class Notification4 extends ActionBarActivity {
         spinner3.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
         spinner4.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
         spinner5.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        date = (EditText) findViewById(R.id.editText7);
+        date.setOnClickListener(this);
 
         next4 = (Button) findViewById(R.id.next4);
 
@@ -50,7 +59,33 @@ public class Notification4 extends ActionBarActivity {
             }
         });
     }
+    public void onClick(View v) {
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
 
+
+
+
+        DatePickerDialog datePicker=new DatePickerDialog(Notification4.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+
+                //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+            }
+        }, year, month, day);
+        datePicker.show();
+
+
+
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

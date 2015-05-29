@@ -15,29 +15,29 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class Notification5 extends ActionBarActivity  implements View.OnClickListener{
+public class CaseFollowUp3 extends ActionBarActivity  implements View.OnClickListener{
 
-    Button next5;
+    private Button next;
     private EditText date;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification5);
+        setContentView(R.layout.activity_case_follow_up3);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   5 OUT 8");
-
-        next5 = (Button) findViewById(R.id.next5);
-        date = (EditText) findViewById(R.id.dateofreturn);
+        ab.setTitle("CASE FOLLOW UP FORM  3 OUT OF 7");
+        next = (Button) findViewById(R.id.button10);
+        date = (EditText) findViewById(R.id.editText51);
         date.setOnClickListener(this);
 
-        next5.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification5.this, Notification6.class);
+                Intent ip = new Intent(CaseFollowUp3.this, CaseFollowUp4.class);
                 startActivity(ip);
 
             }
         });
+
     }
 
     public void onClick(View v) {
@@ -51,12 +51,11 @@ public class Notification5 extends ActionBarActivity  implements View.OnClickLis
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification5.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(CaseFollowUp3.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-
 
                 //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
             }
@@ -70,7 +69,7 @@ public class Notification5 extends ActionBarActivity  implements View.OnClickLis
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notification5, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up3, menu);
         return true;
     }
 

@@ -1,5 +1,11 @@
 package com.example.tmutabazi.rbc;
 
+<<<<<<< HEAD
+=======
+import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
+>>>>>>> origin/master
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -7,23 +13,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+<<<<<<< HEAD
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+=======
+import android.widget.DatePicker;
+import android.widget.EditText;
+>>>>>>> origin/master
+
+import java.util.Calendar;
+import java.util.TimeZone;
 
 
-public class InvestigationForm2 extends ActionBarActivity {
+public class InvestigationForm2 extends ActionBarActivity implements View.OnClickListener{
     private Button next;
+<<<<<<< HEAD
     private RadioGroup radioSexGroup;
     private RadioButton radioSexButton;
+=======
+    private EditText date;
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investigation_form2);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("INVESTIGATION FORM    2 OUT OF 5");
+        ab.setTitle("INVESTIGATION FORM    2 OUT OF 6");
         next = (Button) findViewById(R.id.button2);
+<<<<<<< HEAD
         radioSexGroup = (RadioGroup) findViewById(R.id.radioSex);
+=======
+        date = (EditText) findViewById(R.id.editText12);
+        date.setOnClickListener(this);
+>>>>>>> origin/master
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +67,34 @@ public class InvestigationForm2 extends ActionBarActivity {
             }
         });
     }
+    public void onClick(View v) {
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
 
 
+
+
+<<<<<<< HEAD
+=======
+        DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm2.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+            }
+        }, year, month, day);
+        datePicker.show();
+
+
+
+
+    }
+>>>>>>> origin/master
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
