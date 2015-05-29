@@ -8,24 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-<<<<<<< HEAD
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-=======
 import android.widget.DatePicker;
 import android.widget.EditText;
->>>>>>> origin/master
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
-
-<<<<<<< HEAD
-
-=======
 public class Notification extends ActionBarActivity implements View.OnClickListener{
     private EditText date;
->>>>>>> origin/master
     Button next1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
