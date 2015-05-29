@@ -42,30 +42,74 @@ public class InvestigationForm6 extends ActionBarActivity implements View.OnClic
         getMenuInflater().inflate(R.menu.menu_investigation_form6, menu);
         return true;
     }
-    public void onClick(View v) {
+    public void onClick(final View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
+        switch (v.getId()) {
+            case R.id.editText38:
+                DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm6.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
 
 
+                        //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                    }
+                }, year, month, day);
+                datePicker.show();
+
+                break;
+
+            case R.id.editText42:
+                DatePickerDialog datePicker1=new DatePickerDialog(InvestigationForm6.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        date2.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm6.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date2.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date3.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date4.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                    }
+                }, year, month, day);
+                datePicker1.show();
 
-                //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
-            }
-        }, year, month, day);
-        datePicker.show();
+                break;
+            case R.id.editText44 :
+                DatePickerDialog datePicker2=new DatePickerDialog(InvestigationForm6.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        date3.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+
+                        //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                    }
+                }, year, month, day);
+                datePicker2.show();
+                break;
+            case R.id.editText45 :
+                DatePickerDialog datePicker3=new DatePickerDialog(InvestigationForm6.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        date4.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+
+                        //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                    }
+                }, year, month, day);
+                datePicker3.show();
+
+                break;
+
+
+        }
+
 
 
 

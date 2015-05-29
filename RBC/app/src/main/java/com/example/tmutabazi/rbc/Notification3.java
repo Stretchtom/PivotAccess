@@ -49,7 +49,7 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
         });
     }
 
-    public void onClick(View v) {
+    public void onClick(final View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -58,19 +58,20 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
         int minute = calendar.get(Calendar.MINUTE);
 
 
+            DatePickerDialog datePicker = new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                      int dayOfMonth) {
+                    date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                    date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
+                    //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                }
+            }, year, month, day);
+            datePicker.show();
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
 
-                //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
-            }
-        }, year, month, day);
-        datePicker.show();
 
 
 
