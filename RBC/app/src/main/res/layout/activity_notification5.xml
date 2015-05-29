@@ -19,38 +19,39 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:layout_toStartOf="@+id/radioNoouttravel" />
+        android:layout_toStartOf="@+id/radionextravel"
+        android:layout_toLeftOf="@+id/radionextravel" />
 
     <RadioGroup
         android:id="@+id/radiotravel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/textView33"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioYestravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/radioNoouttravel"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        />
 
 
     <RadioButton
         android:id="@+id/radioNoouttravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignBottom="@+id/textView33"
-        android:layout_toLeftOf="@+id/radioYestravel"
-        android:layout_toStartOf="@+id/radioYestravel" />
-
+         />
+    </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,8 +92,8 @@
         android:hint="Return date of travel"
         android:textSize="30dp"
         android:layout_below="@+id/textView35"
-        android:layout_toRightOf="@+id/radiotravel"
-        android:layout_toEndOf="@+id/radiotravel" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -101,11 +102,13 @@
         android:id="@+id/preventmeasures"
         android:hint="Preventable measures taken"
         android:textSize="30dp"
+
+        android:inputType="text"
         android:layout_below="@+id/dateofreturn"
-        android:layout_toRightOf="@+id/radiotravel"
-        android:layout_toLeftOf="@+id/radioYestravel"
-        android:layout_toStartOf="@+id/radioYestravel"
-        android:inputType="text" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/countryOut"
+        android:layout_toStartOf="@+id/countryOut" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,52 +117,52 @@
         android:id="@+id/textView36"
         android:textSize="30dp"
         android:textColor="#ff000000"
+
         android:layout_below="@+id/preventmeasures"
-        android:layout_toRightOf="@+id/radiotravel"
-        android:layout_toLeftOf="@+id/radioNoouttravel"
-        android:layout_toStartOf="@+id/radioNoouttravel"
-        android:layout_marginTop="10dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/dateofreturn"
+        android:layout_alignEnd="@+id/dateofreturn" />
 
     <RadioGroup
         android:id="@+id/radionextravel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_above="@+id/editText8"
+        android:layout_toRightOf="@+id/dateofreturn"
+        android:layout_toEndOf="@+id/dateofreturn">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioYesnextravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/radioNonexttravel"
-        android:layout_toRightOf="@+id/radioNonexttravel"
-        android:layout_toEndOf="@+id/radioNonexttravel" />
+         />
 
 
     <RadioButton
         android:id="@+id/radioNonexttravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView36"
-        android:layout_toRightOf="@+id/textView36"
-        android:layout_toEndOf="@+id/textView36" />
-
+         />
+    </RadioGroup>
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText8"
-        android:layout_below="@+id/textView36"
-        android:layout_toRightOf="@+id/radiotravel"
-        android:layout_toEndOf="@+id/radiotravel"
-        android:layout_marginTop="10dp"
         android:hint="If yes, name places"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:layout_below="@+id/textView36"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"

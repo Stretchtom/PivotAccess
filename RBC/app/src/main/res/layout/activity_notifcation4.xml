@@ -137,32 +137,32 @@
     <RadioGroup
         android:id="@+id/radiotravel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/textView33"
+        android:layout_toEndOf="@+id/textView33"
+        android:layout_toRightOf="@+id/textView33">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioYestravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/radioNotravel"
-        android:layout_alignRight="@+id/eightTofourteen"
-        android:layout_alignEnd="@+id/eightTofourteen" />
+        />
 
     <RadioButton
         android:id="@+id/radioNotravel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView33"
-        android:layout_toRightOf="@+id/fortytwoabove"
-        android:layout_toEndOf="@+id/fortytwoabove" />
-
+      />
+    </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

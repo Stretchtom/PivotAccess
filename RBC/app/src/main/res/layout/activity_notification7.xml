@@ -46,9 +46,9 @@
         android:id="@+id/pcrdate"
         android:hint="Date Collected"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView43"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/bsexamoffcier"
+        android:layout_alignLeft="@+id/bsexamoffcier"
+        android:layout_alignStart="@+id/bsexamoffcier" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,20 +64,22 @@
     <RadioGroup
         android:id="@+id/radioPCRcollected"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/textView44"
+        android:layout_alignLeft="@+id/pcrdate"
+        android:layout_alignStart="@+id/pcrdate">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioYespcr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_below="@+id/pcrdate"
-        android:layout_toRightOf="@+id/radioNopcr"
-        android:layout_toEndOf="@+id/radioNopcr" />
+         />
     " />
 
 
@@ -85,12 +87,12 @@
         android:id="@+id/radioNopcr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_below="@+id/pcrdate"
-        android:layout_toRightOf="@+id/bsexamfacility"
-        android:layout_toEndOf="@+id/bsexamfacility" />
+        />
+
+    </RadioGroup>
 
     <EditText
         android:layout_width="wrap_content"
@@ -98,10 +100,11 @@
         android:id="@+id/dbscard"
         android:hint="DBS Card"
         android:textSize="30dp"
-        android:layout_below="@+id/radioNopcr"
+
+        android:inputType="number"
+        android:layout_below="@+id/textView44"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:inputType="number" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="320dp"
@@ -114,8 +117,8 @@
         android:layout_below="@+id/dbscard"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toLeftOf="@+id/next7"
+        android:layout_toStartOf="@+id/next7" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -126,69 +129,65 @@
         android:textColor="#ff000000"
         android:layout_below="@+id/editText10"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
-
-    <RadioGroup
-        android:id="@+id/radioPCRcollected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-    </RadioGroup>
-
-    <RadioButton
-        android:id="@+id/radioVivax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vivax"
-        android:checked="false"
-        android:textSize="30dp"
-
-        android:layout_below="@+id/textView45"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/radioMalarie"
-        android:layout_alignEnd="@+id/radioMalarie" />
-
-
-    <RadioButton
-        android:id="@+id/radioFalciparum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Falciparum"
-        android:checked="false"
-        android:textSize="30dp"
-        android:layout_below="@+id/textView45"
-        android:layout_alignRight="@+id/textView45"
-        android:layout_alignEnd="@+id/textView45" />
-    <RadioButton
-        android:id="@+id/radioMalarie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Malariae"
-        android:checked="false"
-        android:textSize="30dp"
-        android:layout_alignTop="@+id/radioNot"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <RadioButton
-        android:id="@+id/radioNot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Determined"
-        android:checked="false"
-        android:textSize="30dp"
-        android:layout_below="@+id/radioFalciparum"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
         android:id="@+id/next7"
-        android:layout_below="@+id/radioNot"
-        android:layout_alignRight="@+id/radioNot"
-        android:layout_alignEnd="@+id/radioNot" />
+        android:layout_below="@+id/checkBox4"
+        android:layout_toRightOf="@+id/textView45"
+        android:layout_toEndOf="@+id/textView45" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Vivax"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:textColor="#ff000000"
+        android:textSize="30dp"
+        android:layout_below="@+id/textView45"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Falciparum"
+        android:id="@+id/checkBox2"
+        android:checked="false"
+        android:textSize="30dp"
+        android:textColor="#ff000000"
+        android:layout_below="@+id/textView45"
+        android:layout_alignRight="@+id/textView45"
+        android:layout_alignEnd="@+id/textView45"
+        android:layout_alignBottom="@+id/checkBox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Malarie"
+        android:id="@+id/checkBox3"
+        android:checked="false"
+        android:textColor="#ff000000"
+        android:textSize="30dp"
+        android:layout_above="@+id/next7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Not Determined"
+        android:id="@+id/checkBox4"
+        android:checked="false"
+        android:textColor="#ff000000"
+        android:textSize="30dp"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
 
 </RelativeLayout>

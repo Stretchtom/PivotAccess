@@ -44,9 +44,8 @@
     <RadioGroup
         android:id="@+id/radioSex"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" />
 
-    </RadioGroup>
 
     <RadioButton
         android:id="@+id/radioMale"
@@ -65,7 +64,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="F"
-        android:checked="false"
         android:textColor="#ff000000"
         android:textSize="30dp"
         android:layout_alignTop="@+id/radioMale"

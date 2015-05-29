@@ -11,32 +11,18 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
-    Button notification;
-    Button investigation;
+    Button login;
     private android.support.v7.app.ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        notification = (Button) findViewById(R.id.notification);
-        investigation = (Button) findViewById(R.id.investigation);
-        actionBar = getSupportActionBar();
-
-
-        notification.setOnClickListener(new View.OnClickListener() {
+        login = (Button) findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(MainActivity.this, Notification.class);
-                startActivity(ip);
-            }
-        });
-
-
-        investigation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ip = new Intent(MainActivity.this, InvestigationForm.class);
+                Intent ip = new Intent(MainActivity.this, Dispatcher.class);
                 startActivity(ip);
             }
         });

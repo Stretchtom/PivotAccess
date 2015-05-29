@@ -14,9 +14,9 @@
         android:id="@+id/textView37"
         android:textSize="30dp"
         android:textColor="#ff000000"
-        android:layout_below="@+id/radioRDT"
-        android:layout_toRightOf="@+id/radioRDT"
-        android:layout_toEndOf="@+id/radioRDT" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="240dp"
@@ -26,9 +26,10 @@
         android:id="@+id/rdtDate"
         android:hint="Date perfomed"
         android:textSize="30dp"
-        android:layout_below="@+id/radioRDT"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/textView39"
+        android:layout_toEndOf="@+id/radiogametocytes"
+        android:layout_alignLeft="@+id/editText9"
+        android:layout_alignStart="@+id/editText9" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,9 +69,13 @@
     <RadioGroup
         android:id="@+id/radioRDT"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rdtofficer"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioPositiveRDT"
@@ -79,9 +84,7 @@
         android:text="Positive"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView39"
-        android:layout_alignRight="@+id/rdtofficer"
-        android:layout_alignEnd="@+id/rdtofficer" />
+        />
 
 
     <RadioButton
@@ -91,10 +94,8 @@
         android:text="Negative"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView39"
-        android:layout_toLeftOf="@+id/radioPositiveRDT"
-        android:layout_toStartOf="@+id/radioPositiveRDT" />
-
+         />
+    </RadioGroup>
     <TextView
         android:layout_width="240dp"
         android:layout_height="wrap_content"
@@ -102,10 +103,9 @@
         android:id="@+id/textView40"
         android:textSize="30dp"
         android:textColor="#ff000000"
-        android:layout_below="@+id/radioNegativeRDT"
-        android:layout_toRightOf="@+id/radioRDT"
-        android:layout_toEndOf="@+id/radioRDT"
-        android:layout_marginTop="10dp" />
+        android:layout_below="@+id/radioRDT"
+        android:layout_alignRight="@+id/textView42"
+        android:layout_alignEnd="@+id/textView42" />
 
     <EditText
         android:layout_width="240dp"
@@ -115,7 +115,7 @@
         android:id="@+id/bsDate"
         android:hint="Date perfomed"
         android:textSize="30dp"
-        android:layout_below="@+id/radioPositiveRDT"
+
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -125,13 +125,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/slidenumber"
-        android:layout_below="@+id/bsDate"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:hint="Slide Number"
         android:textSize="30dp"
-        android:layout_alignRight="@+id/textView40"
-        android:layout_alignEnd="@+id/textView40" />
+        android:layout_alignTop="@+id/editText9"
+        android:layout_alignRight="@+id/textView42"
+        android:layout_alignEnd="@+id/textView42" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -140,12 +138,11 @@
         android:id="@+id/editText9"
         android:hint="Date examined"
         android:textSize="30dp"
-        android:layout_below="@+id/bsDate"
-        android:layout_alignRight="@+id/bsDate"
-        android:layout_alignEnd="@+id/bsDate"
+        android:inputType="date"
+        android:layout_below="@+id/rdtDate"
+        android:layout_toEndOf="@+id/slidenumber"
         android:layout_alignLeft="@+id/bsDate"
-        android:layout_alignStart="@+id/bsDate"
-        android:inputType="date" />
+        android:layout_alignStart="@+id/bsDate" />
 
     <EditText
         android:layout_width="240dp"
@@ -156,16 +153,21 @@
         android:hint="Date result received"
         android:textSize="30dp"
         android:layout_below="@+id/slidenumber"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/editText9"
-        android:layout_toRightOf="@+id/radioRDT"
-        android:layout_toEndOf="@+id/radioRDT" />
+        android:layout_toStartOf="@+id/editText9" />
 
     <RadioGroup
         android:id="@+id/radioBS"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/textView41"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioPositiveBS"
@@ -174,9 +176,7 @@
         android:text="Positive"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/radioNegativeBS"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+         />
 
 
     <RadioButton
@@ -186,10 +186,8 @@
         android:text="Negative"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView41"
-        android:layout_toLeftOf="@+id/radioPositiveBS"
-        android:layout_toStartOf="@+id/radioPositiveBS" />
-
+        />
+    </RadioGroup>
     <TextView
         android:layout_width="240dp"
         android:layout_height="wrap_content"
@@ -199,8 +197,7 @@
         android:textColor="#ff000000"
         android:layout_below="@+id/bsdatereceived"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="200dp"
@@ -209,48 +206,48 @@
         android:id="@+id/textView42"
         android:textSize="30dp"
         android:textColor="#ff000000"
-        android:layout_below="@+id/radioNegativeBS"
+        android:layout_below="@+id/radioBS"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <RadioGroup
         android:id="@+id/radiogametocytes"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/textView42"
+        android:layout_toRightOf="@+id/textView41"
+        android:layout_toEndOf="@+id/textView41">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioPositivegametocytes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_below="@+id/radioPositiveBS"
-        android:layout_alignLeft="@+id/radioPositiveBS"
-        android:layout_alignStart="@+id/radioPositiveBS" />
-        " />
+        />
+
 
 
     <RadioButton
         android:id="@+id/radioNegativegametocytes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_below="@+id/radioNegativeBS"
-        android:layout_alignRight="@+id/bsdatereceived"
-        android:layout_alignEnd="@+id/bsdatereceived" />
-
+         />
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
         android:id="@+id/next6"
-        android:layout_below="@+id/radioPositivegametocytes"
-        android:layout_alignRight="@+id/radioPositiveBS"
-        android:layout_alignEnd="@+id/radioPositiveBS" />
+        android:layout_alignBottom="@+id/radiogametocytes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

@@ -1,17 +1,42 @@
 package com.example.tmutabazi.rbc;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class PermanentAddress extends ActionBarActivity {
+
+    Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permanent_address);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setTitle("Permanent Address");
+        Intent intent = getIntent();
+        final String activity = intent.getStringExtra("Activity");
+        next = (Button) findViewById(R.id.button3);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (activity.equals("notification2"))
+                {
+                    Intent ip = new Intent(PermanentAddress.this, Notification3.class);
+                    startActivity(ip);
+                }
+
+
+
+            }
+        });
+
     }
 
 

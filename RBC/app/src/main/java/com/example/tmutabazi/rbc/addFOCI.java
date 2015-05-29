@@ -7,31 +7,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 
-public class Notification extends ActionBarActivity{
+public class addFOCI extends ActionBarActivity {
 
-
-    Button next1;
+    Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
-        android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   1 OUT 8");
+        setContentView(R.layout.activity_add_foci);
 
-        next1 = (Button) findViewById(R.id.next1);
+        next = (Button) findViewById(R.id.nextFoci);
 
-        next1.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification.this, Notification2.class);
+                Intent ip = new Intent(addFOCI.this, PermanentAddress.class);
                 startActivity(ip);
-
-
-
             }
         });
     }
@@ -40,7 +32,7 @@ public class Notification extends ActionBarActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notification, menu);
+        getMenuInflater().inflate(R.menu.menu_add_foci, menu);
         return true;
     }
 
@@ -58,7 +50,4 @@ public class Notification extends ActionBarActivity{
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
 }

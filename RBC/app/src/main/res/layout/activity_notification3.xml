@@ -66,31 +66,33 @@
     <RadioGroup
         android:id="@+id/radioBlood"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_above="@+id/textView24"
+        android:layout_toEndOf="@+id/textView23"
+        android:layout_alignLeft="@+id/occupation"
+        android:layout_alignStart="@+id/occupation">
 
-    </RadioGroup>
+
 
     <RadioButton
         android:id="@+id/radioYesBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Y"
+        android:text="Yes"
         android:checked="true"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView23"
-        android:layout_alignRight="@+id/editText4"
-        android:layout_alignEnd="@+id/editText4" />
+         />
 
     <RadioButton
         android:id="@+id/radioNoBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N"
+        android:text="No"
         android:checked="false"
         android:textSize="30dp"
-        android:layout_alignTop="@+id/textView23"
-        android:layout_toRightOf="@+id/textView23"
-        android:layout_toEndOf="@+id/textView23" />
+         />
+    </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,10 +102,10 @@
         android:textSize="30dp"
         android:textColor="#ff000000"
         android:layout_below="@+id/textView23"
-        android:layout_toRightOf="@+id/radioBlood"
-        android:layout_toLeftOf="@+id/radioNoBlood"
-        android:layout_toStartOf="@+id/radioNoBlood"
-        android:layout_marginTop="10dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editText6"
+        android:layout_toStartOf="@+id/editText6" />
 
     <EditText
         android:layout_width="wrap_content"

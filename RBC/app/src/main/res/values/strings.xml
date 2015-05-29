@@ -68,4 +68,10 @@
     <string name="title_activity_investigation_form4">InvestigationForm4</string>
     <string name="title_activity_investigation_form5">InvestigationForm5</string>
     <string name="title_activity_case_follow_up">CaseFollowUp</string>
+    <string name="title_activity_dispatcher">Dispatcher</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_foci">addFOCI</string>
     </resources>
