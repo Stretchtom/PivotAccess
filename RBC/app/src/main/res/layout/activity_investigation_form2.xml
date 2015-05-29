@@ -68,18 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="F"
-
-<<<<<<< HEAD
-
         android:checked="false"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
-
-=======
-        android:checked="false"
-        android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true"
->>>>>>> origin/master
         android:textColor="#ff000000"
         android:textSize="30dp" />
     </RadioGroup>

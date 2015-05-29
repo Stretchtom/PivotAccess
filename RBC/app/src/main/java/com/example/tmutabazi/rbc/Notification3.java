@@ -57,23 +57,6 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
 
-
-            DatePickerDialog datePicker = new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                      int dayOfMonth) {
-                    date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                    date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-
-                    //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
-                }
-            }, year, month, day);
-            datePicker.show();
-
-
-<<<<<<< HEAD
-
-=======
         DatePickerDialog datePicker=new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -91,7 +74,6 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
             }
         }, year, month, day);
         datePicker.show();
->>>>>>> origin/master
 
 
 

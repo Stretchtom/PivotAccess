@@ -156,7 +156,7 @@ public class Dispatcher extends ActionBarActivity {
                 startActivity(ip);
                 break;
             case 2:
-                Intent ip1 = new Intent(Dispatcher.this, CaseFollowUp1.class);
+                Intent ip1 = new Intent(Dispatcher.this, InvestigationForm.class);
                 startActivity(ip1);
                 break;
             case 3:

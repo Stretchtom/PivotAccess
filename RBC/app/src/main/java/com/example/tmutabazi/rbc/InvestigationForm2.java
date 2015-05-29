@@ -2,35 +2,17 @@ package com.example.tmutabazi.rbc;
 
 
 import android.app.DatePickerDialog;
-<<<<<<< HEAD
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-
-=======
->>>>>>> origin/master
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-<<<<<<< HEAD
-
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
-
-import android.widget.DatePicker;
-import android.widget.EditText;
-
-=======
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
->>>>>>> origin/master
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -43,10 +25,6 @@ public class InvestigationForm2 extends ActionBarActivity implements View.OnClic
     private RadioButton radioSexButton;
 
     private EditText date;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +37,7 @@ public class InvestigationForm2 extends ActionBarActivity implements View.OnClic
 
         date = (EditText) findViewById(R.id.editText12);
         date.setOnClickListener(this);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,12 +70,7 @@ public class InvestigationForm2 extends ActionBarActivity implements View.OnClic
 
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/master
         DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm2.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
