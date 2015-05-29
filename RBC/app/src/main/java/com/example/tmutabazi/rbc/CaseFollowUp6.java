@@ -2,40 +2,40 @@ package com.example.tmutabazi.rbc;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class Notification extends ActionBarActivity implements View.OnClickListener{
+public class CaseFollowUp6 extends ActionBarActivity implements View.OnClickListener{
+    private Spinner one;
+    private Button next;
     private EditText date;
-    Button next1;
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
+        setContentView(R.layout.activity_case_follow_up7);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   1 OUT 8");
-
-        next1 = (Button) findViewById(R.id.next1);
-        date = (EditText) findViewById(R.id.CaseCode);
+        ab.setTitle("CASE FOLLOW UP FORM  6 OUT OF 7");
+        one = (Spinner)findViewById(R.id.spinner9);
+        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TreatmentGiven, R.layout.spinner4));
+        next = (Button) findViewById(R.id.button12);
+        date = (EditText) findViewById(R.id.editText55);
         date.setOnClickListener(this);
-
-        next1.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification.this, Notification2.class);
+                Intent ip = new Intent(CaseFollowUp6.this, CaseFollowUp7.class);
                 startActivity(ip);
-
-
 
             }
         });
@@ -51,7 +51,7 @@ public class Notification extends ActionBarActivity implements View.OnClickListe
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(CaseFollowUp6.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
@@ -70,7 +70,7 @@ public class Notification extends ActionBarActivity implements View.OnClickListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notification, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up7, menu);
         return true;
     }
 

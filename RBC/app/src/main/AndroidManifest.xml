@@ -76,6 +76,34 @@
             android:name=".CaseFollowUp1"
             android:label="@string/title_activity_case_follow_up" >
         </activity>
+        <activity
+            android:name=".InvestigationForm6"
+            android:label="@string/title_activity_investigation_form6" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp2"
+            android:label="@string/title_activity_case_follow_up2" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp3"
+            android:label="@string/title_activity_case_follow_up3" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp4"
+            android:label="@string/title_activity_case_follow_up4" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp5"
+            android:label="@string/title_activity_case_follow_up5" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp6"
+            android:label="@string/title_activity_case_follow_up7" >
+        </activity>
+        <activity
+            android:name=".CaseFollowUp7"
+            android:label="@string/title_activity_case_follow_up8" >
+        </activity>
     </application>
 
 </manifest>

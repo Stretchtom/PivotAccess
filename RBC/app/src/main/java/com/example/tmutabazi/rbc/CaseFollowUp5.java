@@ -11,24 +11,22 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 
-public class InvestigationForm5 extends ActionBarActivity {
+public class CaseFollowUp5 extends ActionBarActivity {
     private Spinner one;
-    private Spinner two;
     private Button next;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_investigation_form5);
+        setContentView(R.layout.activity_case_follow_up6);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("INVESTIGATION FORM    5 OUT OF 6");
-        one = (Spinner)findViewById(R.id.spinner5);
-        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TypeOfHabitat, R.layout.spinner4));
-        two = (Spinner)findViewById(R.id.spinner6);
-        two.setAdapter(ArrayAdapter.createFromResource(this, R.array.LocationOfHouse, R.layout.spinner5));
-        next = (Button) findViewById(R.id.button5);
+        ab.setTitle("CASE FOLLOW UP FORM  5 OUT OF 7");
+        one = (Spinner)findViewById(R.id.spinner8);
+        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.species, R.layout.spinner4));
+        next = (Button) findViewById(R.id.button11);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(InvestigationForm5.this, InvestigationForm6.class);
+                Intent ip = new Intent(CaseFollowUp5.this, CaseFollowUp6.class);
                 startActivity(ip);
 
             }
@@ -39,7 +37,7 @@ public class InvestigationForm5 extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_investigation_form5, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up5, menu);
         return true;
     }
 

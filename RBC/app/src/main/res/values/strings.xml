@@ -68,4 +68,29 @@
     <string name="title_activity_investigation_form4">InvestigationForm4</string>
     <string name="title_activity_investigation_form5">InvestigationForm5</string>
     <string name="title_activity_case_follow_up">CaseFollowUp</string>
+    <string name="title_activity_investigation_form6">InvestigationForm6</string>
+    <string-array name="MethodOfDiagnosis">
+        <item>RDT</item>
+        <item>Slide</item>
+
+    </string-array>
+    <string-array name="species">
+        <item>P.vivax</item>
+        <item>P.ovale</item>
+        <item>P.malariae</item>
+
+    </string-array>
+    <string-array name="TreatmentGiven">
+        <item>ACTs</item>
+        <item>Quinine</item>
+        <item>Primaquine</item>
+
+
+    </string-array>
+    <string name="title_activity_case_follow_up2">CaseFollowUp2</string>
+    <string name="title_activity_case_follow_up3">CaseFollowUp3</string>
+    <string name="title_activity_case_follow_up4">CaseFollowUp4</string>
+    <string name="title_activity_case_follow_up5">CaseFollowUp5</string>
+    <string name="title_activity_case_follow_up7">CaseFollowUp7</string>
+    <string name="title_activity_case_follow_up8">CaseFollowUp8</string>
     </resources>
