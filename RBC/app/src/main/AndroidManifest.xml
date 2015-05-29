@@ -81,12 +81,18 @@
             android:name=".Dispatcher"
             android:label="@string/title_activity_dispatcher" >
         </activity>
+<<<<<<< HEAD
 
         <activity
             android:name=".addFOCI"
             android:label="@string/title_activity_add_foci" >
         </activity>
         <activity
+=======
+        <activity
+            android:name=".addFOCI"
+            android:label="@string/title_activity_add_foci" >
+>>>>>>> origin/master
             android:name=".InvestigationForm6"
             android:label="@string/title_activity_investigation_form6" >
         </activity>
@@ -113,7 +119,10 @@
         <activity
             android:name=".CaseFollowUp7"
             android:label="@string/title_activity_case_follow_up8" >
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         </activity>
     </application>
 

@@ -71,7 +71,27 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
             datePicker.show();
 
 
+<<<<<<< HEAD
 
+=======
+        DatePickerDialog datePicker=new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                switch (v.getId()) {
+                    case R.id.illnessDate:
+                        date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
+                    case R.id.editText6:
+                        date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
+
+                    //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, year, month, day);
+        datePicker.show();
+>>>>>>> origin/master
 
 
 

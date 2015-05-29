@@ -47,6 +47,7 @@ public class Dispatcher extends ActionBarActivity {
         navDrawerItems.add(new RBCDrawerItem("Notification Form",R.drawable.forms));
         navDrawerItems.add(new RBCDrawerItem("Investigation Form",R.drawable.forms));
         navDrawerItems.add(new RBCDrawerItem("Follow up Form",R.drawable.forms));
+        navDrawerItems.add(new RBCDrawerItem("Add FOCI",R.drawable.forms));
         navDrawerItems.add(new RBCDrawerItem("Tables",R.drawable.table));
         // setting the nav drawer list adapter
         adapter = new RBCDrawerListAdapter(getApplicationContext(),
@@ -159,11 +160,12 @@ public class Dispatcher extends ActionBarActivity {
                 startActivity(ip1);
                 break;
             case 3:
-                Intent foci = new Intent(Dispatcher.this, addFOCI.class);
-                startActivity(foci);
+                Intent case1 = new Intent(Dispatcher.this, CaseFollowUp1.class);
+                startActivity(case1);
                 break;
             case 4:
-
+                Intent FOCI = new Intent(Dispatcher.this, addFOCI.class);
+                startActivity(FOCI);
                 break;
 
             default:
