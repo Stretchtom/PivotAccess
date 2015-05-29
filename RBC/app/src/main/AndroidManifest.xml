@@ -77,18 +77,12 @@
             android:label="@string/title_activity_case_follow_up" >
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".Dispatcher"
             android:label="@string/title_activity_dispatcher" >
         </activity>
         <activity
-            android:name=".DrawerActivity"
-            android:label="@string/title_activity_drawer" >
-        </activity>
-        <activity
             android:name=".addFOCI"
             android:label="@string/title_activity_add_foci" >
-=======
             android:name=".InvestigationForm6"
             android:label="@string/title_activity_investigation_form6" >
         </activity>
@@ -115,7 +109,6 @@
         <activity
             android:name=".CaseFollowUp7"
             android:label="@string/title_activity_case_follow_up8" >
->>>>>>> origin/master
         </activity>
     </application>
 
