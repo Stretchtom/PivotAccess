@@ -31,6 +31,11 @@ public class PermanentAddress extends ActionBarActivity {
                     Intent ip = new Intent(PermanentAddress.this, Notification3.class);
                     startActivity(ip);
                 }
+                else
+                {
+                    Intent ip = new Intent(PermanentAddress.this, Dispatcher.class);
+                    startActivity(ip);
+                }
 
 
 

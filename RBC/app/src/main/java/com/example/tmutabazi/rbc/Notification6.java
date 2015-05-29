@@ -2,8 +2,8 @@ package com.example.tmutabazi.rbc;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -51,7 +51,7 @@ public class Notification6 extends ActionBarActivity  implements View.OnClickLis
         });
     }
 
-    public void onClick(View v) {
+    public void onClick(final View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -66,12 +66,21 @@ public class Notification6 extends ActionBarActivity  implements View.OnClickLis
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
-                date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date2.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date3.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                date4.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                switch (v.getId()) {
+                    case R.id.editText9:
+                        date1.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
+                    case R.id.bsDate:
+                        date2.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
+                    case R.id.rdtDate:
+                        date3.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
+                    case R.id.bsdatereceived:
+                        date4.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        break;
 
-
+                }
                 //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
             }
         }, year, month, day);

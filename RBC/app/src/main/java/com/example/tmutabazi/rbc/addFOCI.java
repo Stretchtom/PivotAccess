@@ -23,6 +23,7 @@ public class addFOCI extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent ip = new Intent(addFOCI.this, PermanentAddress.class);
+                ip.putExtra("Activity", "addFoci");
                 startActivity(ip);
             }
         });
