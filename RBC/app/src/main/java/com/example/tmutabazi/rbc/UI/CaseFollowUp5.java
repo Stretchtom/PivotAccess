@@ -1,38 +1,45 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+
+import com.example.tmutabazi.rbc.R;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    Button login;
-    private android.support.v7.app.ActionBar actionBar;
+public class CaseFollowUp5 extends ActionBarActivity {
+    private Spinner one;
+    private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        login = (Button) findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_case_follow_up6);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setTitle("CASE FOLLOW UP FORM  5 OUT OF 7");
+        one = (Spinner)findViewById(R.id.spinner8);
+        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.species, R.layout.spinner4));
+        next = (Button) findViewById(R.id.button11);
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(MainActivity.this, Dispatcher.class);
+                Intent ip = new Intent(CaseFollowUp5.this, CaseFollowUp6.class);
                 startActivity(ip);
+
             }
         });
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up5, menu);
         return true;
     }
 

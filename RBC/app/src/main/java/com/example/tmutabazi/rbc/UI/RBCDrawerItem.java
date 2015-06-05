@@ -1,8 +1,6 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
-/**
- * Created by Aimable on 4/3/15.
- */
+
 
 public class RBCDrawerItem {
 

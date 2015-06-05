@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -10,25 +10,27 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.example.tmutabazi.rbc.R;
 
-public class InvestigationForm5 extends ActionBarActivity {
+
+public class InvestigationForm3 extends ActionBarActivity {
+    private Button next;
     private Spinner one;
     private Spinner two;
-    private Button next;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_investigation_form5);
+        setContentView(R.layout.activity_investigation_form3);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("INVESTIGATION FORM    5 OUT OF 6");
-        one = (Spinner)findViewById(R.id.spinner5);
-        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TypeOfHabitat, R.layout.spinner4));
-        two = (Spinner)findViewById(R.id.spinner6);
-        two.setAdapter(ArrayAdapter.createFromResource(this, R.array.LocationOfHouse, R.layout.spinner5));
-        next = (Button) findViewById(R.id.button5);
+        ab.setTitle("INVESTIGATION FORM    3 OUT OF 6");
+        one = (Spinner)findViewById(R.id.spinner);
+        two = (Spinner)findViewById(R.id.spinner2);
+        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.caseDetection, R.layout.fat_spinner_entry));
+        two.setAdapter(ArrayAdapter.createFromResource(this, R.array.SlideResults, R.layout.spinner1));
+        next = (Button) findViewById(R.id.button3);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(InvestigationForm5.this, InvestigationForm6.class);
+                Intent ip = new Intent(InvestigationForm3.this, InvestigationForm4.class);
                 startActivity(ip);
 
             }
@@ -39,7 +41,7 @@ public class InvestigationForm5 extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_investigation_form5, menu);
+        getMenuInflater().inflate(R.menu.menu_investigation_form3, menu);
         return true;
     }
 

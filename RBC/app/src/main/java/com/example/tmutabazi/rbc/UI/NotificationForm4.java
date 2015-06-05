@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -13,32 +13,64 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.tmutabazi.rbc.Notifiation.Notification;
+import com.example.tmutabazi.rbc.R;
+
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class CaseFollowUp6 extends ActionBarActivity implements View.OnClickListener{
-    private Spinner one;
-    private Button next;
+public class NotificationForm4 extends ActionBarActivity implements View.OnClickListener{
+
+    private Spinner spinner1;
+    private Spinner spinner2;
+    private Spinner spinner3;
+    private Spinner spinner4;
+    private Spinner spinner5;
     private EditText date;
+    Notification notification;
+    Button next4;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_case_follow_up7);
+        setContentView(R.layout.activity_notifcation4);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("CASE FOLLOW UP FORM  6 OUT OF 7");
-        one = (Spinner)findViewById(R.id.spinner9);
-        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TreatmentGiven, R.layout.spinner4));
-        next = (Button) findViewById(R.id.button12);
-        date = (EditText) findViewById(R.id.editText55);
+        ab.setTitle("NOTIFICATION FORM   4 OUT 8");
+        Intent i = getIntent();
+        notification = (Notification) i.getSerializableExtra("object");
+
+        spinner1 = (Spinner)findViewById(R.id.zeroToseven);
+        spinner2 = (Spinner)findViewById(R.id.eightTofourteen);
+        spinner3 = (Spinner)findViewById(R.id.fifteentwentyone);
+        spinner4 = (Spinner)findViewById(R.id.twentyonefortytwo);
+        spinner5 = (Spinner)findViewById(R.id.fortytwoabove);
+        spinner1.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        spinner2.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        spinner3.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        spinner4.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        spinner5.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
+        date = (EditText) findViewById(R.id.editText7);
         date.setOnClickListener(this);
-        next.setOnClickListener(new View.OnClickListener() {
+
+        next4 = (Button) findViewById(R.id.next4);
+
+        next4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(CaseFollowUp6.this, CaseFollowUp7.class);
+                Intent ip = new Intent(NotificationForm4.this, NotificationForm5.class);
                 startActivity(ip);
+
+
 
             }
         });
+    }
+    public Notification objectBuilding(Notification notification)
+    {
+        notification.setSleptBeforeIllness(spinner1.getSelectedItem().toString(),spinner2.getSelectedItem().toString(),spinner3.getSelectedItem().toString(),spinner4.getSelectedItem().toString(),spinner5.getSelectedItem().toString());
+
+
+        return notification;
     }
     public void onClick(View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
@@ -51,11 +83,12 @@ public class CaseFollowUp6 extends ActionBarActivity implements View.OnClickList
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(CaseFollowUp6.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(NotificationForm4.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+
 
                 //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
             }
@@ -70,7 +103,7 @@ public class CaseFollowUp6 extends ActionBarActivity implements View.OnClickList
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_case_follow_up7, menu);
+        getMenuInflater().inflate(R.menu.menu_notifcation4, menu);
         return true;
     }
 

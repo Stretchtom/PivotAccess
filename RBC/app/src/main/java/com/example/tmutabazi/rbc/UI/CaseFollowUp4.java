@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.tmutabazi.rbc.R;
 
 
 public class CaseFollowUp4 extends ActionBarActivity {

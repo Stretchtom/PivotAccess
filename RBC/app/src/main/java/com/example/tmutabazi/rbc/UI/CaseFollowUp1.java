@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
 import java.util.TimeZone;

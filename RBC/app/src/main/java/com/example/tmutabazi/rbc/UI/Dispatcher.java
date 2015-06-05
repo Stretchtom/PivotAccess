@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.ArrayList;
 
@@ -59,8 +61,10 @@ public class Dispatcher extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+
                 R.string.app_name, // nav drawer open - description for accessibility
                 R.string.app_name // nav drawer close - description for accessibility
+
         ) {
             public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle("RBC");
@@ -69,7 +73,7 @@ public class Dispatcher extends ActionBarActivity {
             }
 
             public void onDrawerOpened(View drawerView) {
-                getSupportActionBar().setTitle(mDrawerTitle);
+                getSupportActionBar().setTitle("RBC");
                 // calling onPrepareOptionsMenu() to hide action bar icons
                 invalidateOptionsMenu();
             }
@@ -152,7 +156,7 @@ public class Dispatcher extends ActionBarActivity {
                 fragment.setArguments(arg);
                 break;
             case 1:
-                Intent ip = new Intent(Dispatcher.this, Notification.class);
+                Intent ip = new Intent(Dispatcher.this, NotificationForm.class);
                 startActivity(ip);
                 break;
             case 2:

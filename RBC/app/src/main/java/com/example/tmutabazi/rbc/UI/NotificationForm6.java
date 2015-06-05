@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -11,11 +11,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 //import com.example.tmutabazi.rbc.R;
+import com.example.tmutabazi.rbc.R;
+
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class Notification6 extends ActionBarActivity  implements View.OnClickListener {
+public class NotificationForm6 extends ActionBarActivity  implements View.OnClickListener {
 
     Button next6;
     private EditText date1;
@@ -44,7 +46,7 @@ public class Notification6 extends ActionBarActivity  implements View.OnClickLis
         next6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification6.this, Notification7.class);
+                Intent ip = new Intent(NotificationForm6.this, NotificationForm7.class);
                 startActivity(ip);
 
             }
@@ -62,7 +64,7 @@ public class Notification6 extends ActionBarActivity  implements View.OnClickLis
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification6.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(NotificationForm6.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {

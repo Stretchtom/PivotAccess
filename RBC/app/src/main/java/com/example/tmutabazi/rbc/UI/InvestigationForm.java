@@ -1,65 +1,44 @@
-package com.example.tmutabazi.rbc;
-
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class InvestigationForm2 extends ActionBarActivity implements View.OnClickListener{
+public class InvestigationForm extends ActionBarActivity implements View.OnClickListener {
     private Button next;
-
-    private RadioGroup radioSexGroup;
-    private RadioButton radioSexButton;
-
     private EditText date;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_investigation_form2);
+        setContentView(R.layout.activity_investigation_form);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("INVESTIGATION FORM    2 OUT OF 6");
-        next = (Button) findViewById(R.id.button2);
-
-        radioSexGroup = (RadioGroup) findViewById(R.id.radioSex);
-
-        date = (EditText) findViewById(R.id.editText12);
+        ab.setTitle("INVESTIGATION FORM    1 OUT OF 6");
+        next = (Button) findViewById(R.id.button);
+        date = (EditText) findViewById(R.id.editText);
         date.setOnClickListener(this);
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(InvestigationForm2.this, InvestigationForm3.class);
+                Intent ip = new Intent(InvestigationForm.this, InvestigationForm2.class);
                 startActivity(ip);
-
-
-                /**int selectedId = radioSexGroup.getCheckedRadioButtonId();
-
-                Log.d("selectedID", selectedId + "HERE");
-
-                // find the radiobutton by returned id
-                radioSexButton = (RadioButton) findViewById(selectedId);
-                Log.d("selectedID", selectedId + "HERE");
-                Toast.makeText(InvestigationForm2.this,
-                        radioSexButton.getText().toString(), Toast.LENGTH_SHORT).show();*/
-
-
 
             }
         });
     }
+
     public void onClick(View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
@@ -71,26 +50,24 @@ public class InvestigationForm2 extends ActionBarActivity implements View.OnClic
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm2.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-                //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
-            }
-        }, year, month, day);
-        datePicker.show();
+                DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
+                        //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+                    }
+                }, year, month, day);
+                datePicker.show();
 
 
 
 
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_investigation_form2, menu);
+        getMenuInflater().inflate(R.menu.menu_investigation_form1, menu);
         return true;
     }
 

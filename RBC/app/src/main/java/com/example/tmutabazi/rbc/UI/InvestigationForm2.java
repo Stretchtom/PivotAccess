@@ -1,58 +1,61 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
+
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class Notification4 extends ActionBarActivity implements View.OnClickListener{
+public class InvestigationForm2 extends ActionBarActivity implements View.OnClickListener{
+    private Button next;
 
-    private Spinner spinner1;
-    private Spinner spinner2;
-    private Spinner spinner3;
-    private Spinner spinner4;
-    private Spinner spinner5;
+    private RadioGroup radioSexGroup;
+    private RadioButton radioSexButton;
+
     private EditText date;
-    Button next4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notifcation4);
+        setContentView(R.layout.activity_investigation_form2);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   4 OUT 8");
+        ab.setTitle("INVESTIGATION FORM    2 OUT OF 6");
+        next = (Button) findViewById(R.id.button2);
 
-        spinner1 = (Spinner)findViewById(R.id.zeroToseven);
-        spinner2 = (Spinner)findViewById(R.id.eightTofourteen);
-        spinner3 = (Spinner)findViewById(R.id.fifteentwentyone);
-        spinner4 = (Spinner)findViewById(R.id.twentyonefortytwo);
-        spinner5 = (Spinner)findViewById(R.id.fortytwoabove);
-        spinner1.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
-        spinner2.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
-        spinner3.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
-        spinner4.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
-        spinner5.setAdapter(ArrayAdapter.createFromResource(this, R.array.workHome, R.layout.spinner));
-        date = (EditText) findViewById(R.id.editText7);
+        radioSexGroup = (RadioGroup) findViewById(R.id.radioSex);
+
+        date = (EditText) findViewById(R.id.editText12);
         date.setOnClickListener(this);
 
-        next4 = (Button) findViewById(R.id.next4);
-
-        next4.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification4.this, Notification5.class);
+                Intent ip = new Intent(InvestigationForm2.this, InvestigationForm3.class);
                 startActivity(ip);
+
+
+                /**int selectedId = radioSexGroup.getCheckedRadioButtonId();
+
+                Log.d("selectedID", selectedId + "HERE");
+
+                // find the radiobutton by returned id
+                radioSexButton = (RadioButton) findViewById(selectedId);
+                Log.d("selectedID", selectedId + "HERE");
+                Toast.makeText(InvestigationForm2.this,
+                        radioSexButton.getText().toString(), Toast.LENGTH_SHORT).show();*/
 
 
 
@@ -70,13 +73,11 @@ public class Notification4 extends ActionBarActivity implements View.OnClickList
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification4.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(InvestigationForm2.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
                 date.setText((monthOfYear + 1) + "/" + dayOfMonth + "/" + year);
-
-
                 //Toast.makeText(ReminderActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
             }
         }, year, month, day);
@@ -87,10 +88,11 @@ public class Notification4 extends ActionBarActivity implements View.OnClickList
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notifcation4, menu);
+        getMenuInflater().inflate(R.menu.menu_investigation_form2, menu);
         return true;
     }
 

@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -7,39 +7,41 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class CaseFollowUp3 extends ActionBarActivity  implements View.OnClickListener{
-
+public class CaseFollowUp6 extends ActionBarActivity implements View.OnClickListener{
+    private Spinner one;
     private Button next;
     private EditText date;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_case_follow_up3);
+        setContentView(R.layout.activity_case_follow_up7);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("CASE FOLLOW UP FORM  3 OUT OF 7");
-        next = (Button) findViewById(R.id.button10);
-        date = (EditText) findViewById(R.id.editText51);
+        ab.setTitle("CASE FOLLOW UP FORM  6 OUT OF 7");
+        one = (Spinner)findViewById(R.id.spinner9);
+        one.setAdapter(ArrayAdapter.createFromResource(this, R.array.TreatmentGiven, R.layout.spinner4));
+        next = (Button) findViewById(R.id.button12);
+        date = (EditText) findViewById(R.id.editText55);
         date.setOnClickListener(this);
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(CaseFollowUp3.this, CaseFollowUp4.class);
+                Intent ip = new Intent(CaseFollowUp6.this, CaseFollowUp7.class);
                 startActivity(ip);
 
             }
         });
-
     }
-
     public void onClick(View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
@@ -51,7 +53,7 @@ public class CaseFollowUp3 extends ActionBarActivity  implements View.OnClickLis
 
 
 
-        DatePickerDialog datePicker=new DatePickerDialog(CaseFollowUp3.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(CaseFollowUp6.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
@@ -66,10 +68,11 @@ public class CaseFollowUp3 extends ActionBarActivity  implements View.OnClickLis
 
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_case_follow_up3, menu);
+        getMenuInflater().inflate(R.menu.menu_case_follow_up7, menu);
         return true;
     }
 

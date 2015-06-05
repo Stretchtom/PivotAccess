@@ -19,7 +19,7 @@
     <string-array name="workHome">
         <item>Work</item>
         <item>Home</item>
-        <item>Both</item>
+
     </string-array>
     <string name="title_activity_notifcation4">Notifcation4</string>
     <string name="title_activity_notification5">Notification5</string>

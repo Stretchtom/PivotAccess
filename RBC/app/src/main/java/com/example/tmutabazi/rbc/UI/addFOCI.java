@@ -1,26 +1,41 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.tmutabazi.rbc.R;
 
 
-public class Notification8 extends ActionBarActivity {
+public class addFOCI extends ActionBarActivity {
 
+    Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification8);
-        android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   8 OUT 8");
+        setContentView(R.layout.activity_add_foci);
+
+        next = (Button) findViewById(R.id.nextFoci);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ip = new Intent(addFOCI.this, PermanentAddress.class);
+                ip.putExtra("Activity", "addFoci");
+                startActivity(ip);
+            }
+        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notification8, menu);
+        getMenuInflater().inflate(R.menu.menu_add_foci, menu);
         return true;
     }
 

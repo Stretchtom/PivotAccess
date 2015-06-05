@@ -1,41 +1,28 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+
+import com.example.tmutabazi.rbc.R;
 
 
-public class Notification7 extends ActionBarActivity {
+public class NotificationForm8 extends ActionBarActivity {
 
-    Button next7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification7);
+        setContentView(R.layout.activity_notification8);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setTitle("NOTIFICATION FORM   7 OUT 8");
-
-        next7 = (Button) findViewById(R.id.next7);
-
-        next7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ip = new Intent(Notification7.this, Notification8.class);
-                startActivity(ip);
-
-            }
-        });
+        ab.setTitle("NOTIFICATION FORM   8 OUT 8");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_notification7, menu);
+        getMenuInflater().inflate(R.menu.menu_notification8, menu);
         return true;
     }
 

@@ -1,30 +1,34 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.tmutabazi.rbc.R;
 
-public class addFOCI extends ActionBarActivity {
 
-    Button next;
+public class NotificationForm7 extends ActionBarActivity {
+
+    Button next7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_foci);
+        setContentView(R.layout.activity_notification7);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setTitle("NOTIFICATION FORM   7 OUT 8");
 
-        next = (Button) findViewById(R.id.nextFoci);
+        next7 = (Button) findViewById(R.id.next7);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        next7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(addFOCI.this, PermanentAddress.class);
-                ip.putExtra("Activity", "addFoci");
+                Intent ip = new Intent(NotificationForm7.this, NotificationForm8.class);
                 startActivity(ip);
+
             }
         });
     }
@@ -33,7 +37,7 @@ public class addFOCI extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_foci, menu);
+        getMenuInflater().inflate(R.menu.menu_notification7, menu);
         return true;
     }
 

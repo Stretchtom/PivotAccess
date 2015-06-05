@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.tmutabazi.rbc.Notification8"
+    tools:context="com.example.tmutabazi.rbc.UI.NotificationForm8"
     android:id="@+id/notification8">
 
     <TextView
@@ -57,41 +57,63 @@
         android:layout_below="@+id/completedby"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:inputType="date" />
+        android:inputType="date"
+        android:layout_toStartOf="@+id/designation"
+        android:layout_toLeftOf="@+id/designation" />
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:id="@+id/facilitytoDH"
-        android:hint="Date sent from facility to DH"
+        android:hint="Verified by"
         android:textSize="30dp"
         android:inputType="date"
-        android:layout_below="@+id/dateofcompletion"
+        android:layout_below="@+id/spinner11"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/completedby"
+        android:layout_alignEnd="@+id/completedby" />
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText11"
-        android:hint="Date sent from facility to DH to Mal&amp;OPDD"
         android:textSize="29dp"
         android:inputType="date"
-        android:layout_below="@+id/facilitytoDH"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/designation"
-        android:layout_alignEnd="@+id/designation" />
+        android:hint="Designation"
+        android:layout_alignTop="@+id/facilitytoDH"
+        android:layout_alignRight="@+id/spinner11"
+        android:layout_alignEnd="@+id/spinner11"
+        android:layout_alignLeft="@+id/designation"
+        android:layout_alignStart="@+id/designation" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:id="@+id/button9"
+        android:textSize="20dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:layout_toRightOf="@+id/textView46"
+        android:layout_toEndOf="@+id/textView46" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner11"
+        android:layout_below="@+id/dateofcompletion"
+        android:layout_toRightOf="@+id/dateofcompletion"
+        android:layout_toEndOf="@+id/dateofcompletion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infection Location"
+        android:id="@+id/textView12"
+        android:textSize="30dp"
+        android:textColor="#ff000000"
+        android:layout_alignTop="@+id/spinner11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

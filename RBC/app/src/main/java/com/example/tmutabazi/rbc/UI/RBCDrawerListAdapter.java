@@ -1,8 +1,6 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
-/**
- * Created by Aimable on 4/3/15.
- */
+
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.tmutabazi.rbc.R;
 
 import java.util.ArrayList;
 

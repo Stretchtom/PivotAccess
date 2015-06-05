@@ -1,4 +1,4 @@
-package com.example.tmutabazi.rbc;
+package com.example.tmutabazi.rbc.UI;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -11,36 +11,52 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+
+import com.example.tmutabazi.rbc.Notifiation.Notification;
+import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
 
-public class Notification3 extends ActionBarActivity implements View.OnClickListener{
+public class NotificationForm3 extends ActionBarActivity implements View.OnClickListener{
     private EditText date;
-    private Spinner spinner;
     private EditText date1;
+    private EditText occupation;
+    private RadioGroup bloodTransfusion;
+    private RadioButton bloodTransfusionSelected;
+    private Spinner travelFrequency;
     Button next3;
+    Notification notification;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification3);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
         ab.setTitle("NOTIFICATION FORM   3 OUT 8");
+        Intent i = getIntent();
+        notification = (Notification) i.getSerializableExtra("object");
+
         date = (EditText) findViewById(R.id.illnessDate);
         date.setOnClickListener(this);
         date1 = (EditText) findViewById(R.id.editText6);
         date1.setOnClickListener(this);
-        spinner = (Spinner)findViewById(R.id.spinner);
-        spinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.frequency, R.layout.spinner));
-
+        travelFrequency = (Spinner)findViewById(R.id.spinner);
+        travelFrequency.setAdapter(ArrayAdapter.createFromResource(this, R.array.frequency, R.layout.spinner));
         next3 = (Button) findViewById(R.id.next3);
 
         next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ip = new Intent(Notification3.this, Notification4.class);
+                notification = objectBuilding(notification);
+                notification.setBloodTransfusionDate(date1.getText().toString());
+                notification.setDateOnsetIllness(date.getText().toString());
+                Intent ip = new Intent(NotificationForm3.this, NotificationForm4.class);
+                ip.putExtra("object",  notification);
                 startActivity(ip);
 
 
@@ -49,6 +65,16 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
         });
     }
 
+    public Notification objectBuilding(Notification notifaction)
+    {
+         occupation = (EditText) findViewById(R.id.occupation);
+        bloodTransfusion = (RadioGroup) findViewById(R.id.radioBlood);
+        bloodTransfusionSelected = (RadioButton) findViewById(bloodTransfusion.getCheckedRadioButtonId());
+        notifaction.setBloodTransfusion(bloodTransfusionSelected.getText().toString());
+        notifaction.setFrequencyOfWorkAway(travelFrequency.getSelectedItem().toString());
+
+        return notification;
+    }
     public void onClick(final View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));
         int year = calendar.get(Calendar.YEAR);
@@ -57,7 +83,7 @@ public class Notification3 extends ActionBarActivity implements View.OnClickList
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
 
-        DatePickerDialog datePicker=new DatePickerDialog(Notification3.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePicker=new DatePickerDialog(NotificationForm3.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
