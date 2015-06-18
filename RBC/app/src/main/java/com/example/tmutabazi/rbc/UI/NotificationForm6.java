@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 //import com.example.tmutabazi.rbc.R;
+import com.example.tmutabazi.rbc.Notifiation.Notification;
 import com.example.tmutabazi.rbc.R;
 
 import java.util.Calendar;
@@ -24,6 +25,7 @@ public class NotificationForm6 extends ActionBarActivity  implements View.OnClic
     private EditText date2;
     private EditText date3;
     private EditText date4;
+    Notification notification;
 
 
     @Override
@@ -32,6 +34,8 @@ public class NotificationForm6 extends ActionBarActivity  implements View.OnClic
         setContentView(R.layout.activity_notification6);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
         ab.setTitle("NOTIFICATION FORM   6 OUT 8");
+        Intent i = getIntent();
+        notification = (Notification) i.getSerializableExtra("object");
 
         next6 = (Button) findViewById(R.id.next6);
         date1 = (EditText) findViewById(R.id.editText9);
@@ -46,12 +50,22 @@ public class NotificationForm6 extends ActionBarActivity  implements View.OnClic
         next6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                notification = objectBuilding(notification);
                 Intent ip = new Intent(NotificationForm6.this, NotificationForm7.class);
+                ip.putExtra("object",  notification);
                 startActivity(ip);
 
             }
         });
     }
+
+    public Notification objectBuilding(Notification notification)
+    {
+
+
+        return  notification;
+    }
+
 
     public void onClick(final View v) {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT-4:00"));

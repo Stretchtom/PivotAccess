@@ -93,7 +93,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/WorkSector"
         android:layout_below="@+id/textView3"
         android:layout_toRightOf="@+id/textView3"
         android:layout_toEndOf="@+id/textView3" />
@@ -114,10 +114,10 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5"
+        android:id="@+id/village"
         android:layout_alignTop="@+id/textView5"
-        android:layout_alignLeft="@+id/editText6"
-        android:layout_alignStart="@+id/editText6"
+        android:layout_alignLeft="@+id/dateOfTransfusion"
+        android:layout_alignStart="@+id/dateOfTransfusion"
         android:layout_alignBottom="@+id/textView5" />
 
     <TextView
@@ -126,7 +126,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Investigation Case No"
         android:id="@+id/textView6"
-        android:layout_below="@+id/editText5"
+        android:layout_below="@+id/village"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
@@ -136,8 +136,8 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText6"
-        android:layout_above="@+id/editText7"
+        android:id="@+id/dateOfTransfusion"
+        android:layout_above="@+id/returnInDate"
         android:layout_alignRight="@+id/scrollView"
         android:layout_alignEnd="@+id/scrollView" />
 
@@ -157,10 +157,10 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText7"
+        android:id="@+id/returnInDate"
         android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/editText6"
-        android:layout_alignStart="@+id/editText6" />
+        android:layout_alignLeft="@+id/dateOfTransfusion"
+        android:layout_alignStart="@+id/dateOfTransfusion" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -178,10 +178,10 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText8"
-        android:layout_below="@+id/editText7"
-        android:layout_alignLeft="@+id/editText7"
-        android:layout_alignStart="@+id/editText7" />
+        android:id="@+id/country"
+        android:layout_below="@+id/returnInDate"
+        android:layout_alignLeft="@+id/returnInDate"
+        android:layout_alignStart="@+id/returnInDate" />
 
     <TextView
         android:layout_width="wrap_content"

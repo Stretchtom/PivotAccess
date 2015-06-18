@@ -100,4 +100,6 @@
     <string name="title_activity_case_follow_up5">CaseFollowUp5</string>
     <string name="title_activity_case_follow_up7">CaseFollowUp7</string>
     <string name="title_activity_case_follow_up8">CaseFollowUp8</string>
+
+    <string name="Prompt">Select...</string>
     </resources>

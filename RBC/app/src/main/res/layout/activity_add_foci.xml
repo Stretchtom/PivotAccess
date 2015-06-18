@@ -179,8 +179,7 @@
         android:textSize="20dp"
         android:layout_alignTop="@+id/textView55"
         android:layout_toRightOf="@+id/textView49"
-        android:layout_toLeftOf="@+id/radioNotravel"
-        android:layout_toStartOf="@+id/radioNotravel" />
+      />
 
     <TextView
         android:layout_width="100dp"
